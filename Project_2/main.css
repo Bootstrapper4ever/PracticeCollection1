@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.navbar {
+  background: #ababab;
+  box-shadow: 50px 50px 100px #808080, -50px -50px 100px #d6d6d6;
+  padding: 20px;
+  margin: 20px 100px 0px 100px;
+  border-radius: 20px;
+}
+/* .nav-content: manipulates with the spacing that I want to achieve between elements
+meaning that if I add justify content: space-between, I will achieve the spread between elements */
+/* Shift + alt + A is a comment for both html and css they just look different*/
+/* It is important that I add width {gap - would also work} property, otherwise it won't work */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 1250px;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+}
+img.logo {
+  height: 70px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.links {
+  position: relative;
+  /* For some reason this position:relative; fixed the problem of the line not appearing */
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 40px;
+  box-shadow: 22px 22px 44px #9b9a9a, -22px -22px 44px #ffffff44;
+}
+
+li:nth-child(4) {
+  margin-right: 40px;
+}
+
+
+li {
+  list-style: none;
+}
+
+li > a::before {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 18%;
+  /* left: 50%;
+  transform: translateX(-50%); 
+  makes the line start from the middle outwards*/
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: 0.3s;
+}
+
+a.links:hover::before {
+  width: 65%;
+  color: black;
+  opacity: 0.85;
+}
+
+a.links:hover {
+  color: black;
+  font-weight: bold;
+}
+
+main {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 3%;
+}
+
+.intro-image-card {
+  position: relative;
+}
+.image-text {
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  background-color: rgba(140, 140, 140, 0.858) ;
+  width: 50%;
+  padding: 40px;
+  backdrop-filter: blur(3px);
+}
+
+.title-text-img {
+  width: 100%;
+  font-weight: bold;
+  font-family: 'Lobster Two', sans-serif;
+}
+.text-img {
+  font-family:'Montserrat', sans-serif;
+  font-size: 14px;
+  margin-top: 7px;
+  width: 100%;
+  max-width: 400px;
+  text-align: justify;
+  line-height: 22px;
+}
+.section1 {
+  margin-top: 1rem;
+  height: 120vh;
+  background-color: #c4bdbd;
+  margin-bottom: 1rem;
+}
+/* {
+  margin-top: 1rem;
+  height: 60vh;
+  background-color: #808080;
+  margin-bottom: 1rem;
+} */
+
+
+.main-section {
+}
+
+
+
+h2 {
+  text-transform: capitalize;
+  font-family: 'Lobster Two', sans-serif;
+}
+
+a.btn {
+  font-family: 'Montserrat', sans-serif ;
+  font-size: 12px;
+  color: black;
+  padding: 10px;
+  border: 2px solid blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
